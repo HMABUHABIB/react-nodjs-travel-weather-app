@@ -8,7 +8,7 @@ router.get("/", async (req, res) => {
       `http://api.openweathermap.org/data/2.5/weather?q=${req.query.city}&appid=${process.env.API_KEY_OPEN_WEATHER_MAP}`
     );
     console.log(response);
-    res.send(response);
+    res.send(response.data);
   } catch (error) {
     console.log("openweathermap error");
     res.send(error);
