@@ -7,8 +7,7 @@ router.get("/", function (req, res, next) {
 });
 
 router.get("/weakup", function (req, res, next) {
-  console.log(process.env);
-  res.json({ NAME: process.env.SAMER });
+  res.json("Hallo World");
 });
 
 module.exports = router;
