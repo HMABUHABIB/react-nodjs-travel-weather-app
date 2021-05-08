@@ -1,6 +1,7 @@
 var createError = require("http-errors");
 var express = require("express");
 var path = require("path");
+const expressLayouts = require("express-ejs-layouts");
 
 require("dotenv").config();
 
@@ -15,12 +16,24 @@ var app = express();
 const cors = require("cors");
 app.use(cors());
 
+// view engine setup
+
+// view engine setup
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "pug");
+
 app.use(express.json());
 
-app.use("/", indexRouter);
+app.use("/main", indexRouter);
 app.use("/openweathermap", openweathermap);
 app.use("/pixabay", pixabay);
 app.use("/restcountries", restcountries);
+
+app.use(express.static(path.join(__dirname, "client/build")));
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname + "/client/build/index.html"));
+});
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

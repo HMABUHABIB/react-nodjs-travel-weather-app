@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-travel-weather-app/static/css/main.5d947c74.chunk.css",
+    "main.js": "/react-travel-weather-app/static/js/main.b1fce84e.chunk.js",
+    "main.js.map": "/react-travel-weather-app/static/js/main.b1fce84e.chunk.js.map",
+    "runtime-main.js": "/react-travel-weather-app/static/js/runtime-main.80e86ebc.js",
+    "runtime-main.js.map": "/react-travel-weather-app/static/js/runtime-main.80e86ebc.js.map",
+    "static/js/2.1a3ca8fd.chunk.js": "/react-travel-weather-app/static/js/2.1a3ca8fd.chunk.js",
+    "static/js/2.1a3ca8fd.chunk.js.map": "/react-travel-weather-app/static/js/2.1a3ca8fd.chunk.js.map",
+    "static/js/3.00189116.chunk.js": "/react-travel-weather-app/static/js/3.00189116.chunk.js",
+    "static/js/3.00189116.chunk.js.map": "/react-travel-weather-app/static/js/3.00189116.chunk.js.map",
+    "index.html": "/react-travel-weather-app/index.html",
+    "static/css/main.5d947c74.chunk.css.map": "/react-travel-weather-app/static/css/main.5d947c74.chunk.css.map",
+    "static/js/2.1a3ca8fd.chunk.js.LICENSE.txt": "/react-travel-weather-app/static/js/2.1a3ca8fd.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.80e86ebc.js",
+    "static/js/2.1a3ca8fd.chunk.js",
+    "static/css/main.5d947c74.chunk.css",
+    "static/js/main.b1fce84e.chunk.js"
+  ]
+}
