@@ -12,6 +12,22 @@ const resizeStyle = {
   borderRadius: "1rem",
 };
 
+const options = {
+  colors: ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b"],
+  enableTooltip: true,
+  deterministic: false,
+  fontFamily: "impact",
+  fontSizes: [5, 60],
+  fontStyle: "normal",
+  fontWeight: "normal",
+  padding: 1,
+  rotations: 3,
+  rotationAngles: [0, 90],
+  scale: "sqrt",
+  spiral: "archimedean",
+  transitionDuration: 1000,
+};
+
 const Statistics = () => {
   const [citis, updateCityList] = useState(
     JSON.parse(localStorage.getItem("wordsList"))
@@ -31,7 +47,7 @@ const Statistics = () => {
         style={resizeStyle}
       >
         <div style={{ width: "100%", height: "100%" }}>
-          <ReactWordcloud words={citis} />
+          <ReactWordcloud options={options} words={citis} />
         </div>
       </Resizable>
     </Card>
