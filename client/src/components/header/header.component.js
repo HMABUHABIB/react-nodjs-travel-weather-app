@@ -10,7 +10,7 @@ const Header = () => {
           Home
         </Link>
         <Link className="option" to="/statistics">
-          statistics
+          Statistics
         </Link>
       </div>
     </div>

@@ -1,12 +1,13 @@
 import React from "react";
 
 import SearchBox from "../../components/search-box/searchBox.component";
-import CityCard from "../../components/city-card/cityCard.component";
+import ApiCalls from "../../components/api-calls/api-calls.component";
+import Card from "../../components/custom-card/custom-card.component";
 
 class HomePage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { city: "" };
+    this.state = { city: "Bielefeld" };
   }
 
   handleCityChange = (newCity) => {
@@ -14,12 +15,12 @@ class HomePage extends React.Component {
   };
 
   render() {
-    const { city } = this.state;
     return (
       <div className="App">
-        <SearchBox handleCityChange={this.handleCityChange} />
-        {city}
-        <CityCard></CityCard>
+        <Card>
+          <SearchBox handleCityChange={this.handleCityChange} />
+        </Card>
+        <ApiCalls {...this.state} />
       </div>
     );
   }

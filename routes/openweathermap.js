@@ -5,7 +5,7 @@ const axios = require("axios");
 router.get("/", async (req, res) => {
   try {
     const response = await axios.get(
-      `http://api.openweathermap.org/data/2.5/weather?q=${req.query.city}&appid=${process.env.API_KEY_OPEN_WEATHER_MAP}`
+      `http://api.openweathermap.org/data/2.5/weather?q=${req.query.city}&appid=${process.env.API_KEY_OPEN_WEATHER_MAP}&units=metric`
     );
     console.log(response);
     res.send(response.data);

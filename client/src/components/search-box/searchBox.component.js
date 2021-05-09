@@ -1,5 +1,6 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import nameOfRandomeCity from "./randomCities";
+import CustomButton from "../custom-button/custom-button.compomnent";
 
 import "./searchBox.styles.scss";
 
@@ -13,7 +14,6 @@ const SearchBox = (poops) => {
   };
 
   const onClickHandlerRandomCity = () => {
-    console.log(nameOfRandomeCity());
     poops.handleCityChange(nameOfRandomeCity());
   };
 
@@ -29,6 +29,7 @@ const SearchBox = (poops) => {
         }}
       >
         <input
+          className="city-input"
           value={searchCity}
           name="city"
           type="text"
@@ -37,12 +38,12 @@ const SearchBox = (poops) => {
           placeholder="Enter your destination"
         ></input>
 
-        <button type="button" onClick={onSubmitHandler}>
+        <CustomButton type="button" onClick={onSubmitHandler}>
           Go ahead
-        </button>
-        <button type="button" onClick={onClickHandlerRandomCity}>
+        </CustomButton>
+        <CustomButton type="button" onClick={onClickHandlerRandomCity}>
           I'm Feeling Lucky
-        </button>
+        </CustomButton>
       </form>
     </div>
   );
