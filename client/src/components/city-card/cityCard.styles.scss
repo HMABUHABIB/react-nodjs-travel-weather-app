@@ -17,10 +17,13 @@
 
 .img-pixabay-div {
   width: fit-content;
-  border-radius: 1rem;
   margin: 25px;
 }
-
+.img-flage {
+  width: 20vw;
+  height: auto;
+  margin: auto;
+}
 .trip-data-div {
   margin: 25px;
   width: 65vw;
@@ -28,12 +31,7 @@
   flex-direction: row;
   justify-content: space-between;
 }
-.img-flage {
-  width: 20vw;
-  height: auto;
-  border-radius: 1rem;
-  margin: auto;
-}
+
 .trip-data-text {
   width: 42vw;
   box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
