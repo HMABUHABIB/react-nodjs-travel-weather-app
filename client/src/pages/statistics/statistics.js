@@ -2,24 +2,8 @@ import React from "react";
 import Card from "../../components/custom-card/custom-card.component";
 import ReactWordcloud from "react-wordcloud";
 import { Resizable } from "re-resizable";
-const words = [
-  {
-    text: "told",
-    value: 1,
-  },
-  {
-    text: "mistake",
-    value: 1,
-  },
-  {
-    text: "thought",
-    value: 1,
-  },
-  {
-    text: "bad",
-    value: 1,
-  },
-];
+
+let words = JSON.parse(localStorage.getItem("wordsList"));
 
 const resizeStyle = {
   display: "flex",

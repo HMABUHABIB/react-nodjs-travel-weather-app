@@ -41,6 +41,12 @@ class ApiCalls extends Component {
       });
     } catch (error) {
       alert("Sorry i'm not able to find this city for you");
+      this.setState({
+        cityName: "",
+        openWeatherMapApi: "",
+        pixaBayApi: "",
+        restCountriesApi: "",
+      });
     }
   }
 
