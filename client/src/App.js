@@ -1,31 +1,22 @@
 import React from "react";
+import { Switch, Route } from "react-router-dom";
 
 import Header from "./components/header/header.component";
-import SearchBox from "./components/search-box/searchBox.component";
-import CityCard from "./components/city-card/cityCard.component";
+import HomePage from "./pages/homePage/homePage";
+import Statistics from "./pages/statistics/statistics";
 import "./App.css";
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { city: "" };
-  }
-
-  handleCityChange = (newCity) => {
-    this.setState({ city: newCity });
-  };
-
-  render() {
-    const { city } = this.state;
-    return (
-      <div className="App">
-        <Header />
-        <SearchBox handleCityChange={this.handleCityChange} />
-        {city}
-        <CityCard></CityCard>
-      </div>
-    );
-  }
-}
+const App = () => {
+  return (
+    <div className="App">
+      <Header />
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/statistics" component={Statistics}></Route>
+        <Route component={() => <div>404 Not found</div>} />
+      </Switch>
+    </div>
+  );
+};
 
 export default App;

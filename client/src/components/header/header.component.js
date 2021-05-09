@@ -1,7 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "./header.styles.scss";
 
 const Header = () => {
-  return <h1>Travel Weather App</h1>;
+  return (
+    <div className="header">
+      <div className="options">
+        <Link className="option" to="/">
+          Home
+        </Link>
+        <Link className="option" to="/statistics">
+          statistics
+        </Link>
+      </div>
+    </div>
+  );
 };
 
 export default Header;
