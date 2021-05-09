@@ -13,32 +13,35 @@ class ApiCalls extends Component {
   }
 
   async fetchAndupdateState({ city }) {
-    this.setState({ cityName: city });
-
     /// **fetch openWeatherMapApi ** /////
+    try {
+      const responseWeather = await fetch(
+        `https://react-travel-weather-app-backe.herokuapp.com/openweathermap?city=${city}`
+      );
+      const weather = await responseWeather.json();
+      this.setState({ openWeatherMapApi: weather });
 
-    const responseWeather = await fetch(
-      `https://react-travel-weather-app-backe.herokuapp.com/openweathermap?city=${city}`
-    );
-    const weather = await responseWeather.json();
-    this.setState({ openWeatherMapApi: weather });
+      /// **fetch pixabayApi ** /////
+      const responsePixabay = await fetch(
+        `https://react-travel-weather-app-backe.herokuapp.com/pixabay?city=${city}`
+      );
+      const pixabay = await responsePixabay.json();
 
-    /// **fetch pixabayApi ** /////
-    const responsePixabay = await fetch(
-      `https://react-travel-weather-app-backe.herokuapp.com/pixabay?city=${city}`
-    );
-    const pixabay = await responsePixabay.json();
-    this.setState({ pixaBayApi: pixabay });
+      /// **fetch RestCountriesApi ** /////
 
-    /// **fetch RestCountriesApi ** /////
-
-    const responseRestCountriesApi = await fetch(
-      `https://react-travel-weather-app-backe.herokuapp.com/restcountries?country_codes=${weather.sys.country}`
-    );
-    const restCountries = await responseRestCountriesApi.json();
-    this.setState({ restCountriesApi: restCountries });
-
-    console.log(this.state);
+      const responseRestCountriesApi = await fetch(
+        `https://react-travel-weather-app-backe.herokuapp.com/restcountries?country_codes=${weather.sys.country}`
+      );
+      const restCountries = await responseRestCountriesApi.json();
+      this.setState({
+        cityName: city,
+        openWeatherMapApi: { ...weather },
+        pixaBayApi: { ...pixabay },
+        restCountriesApi: { ...restCountries },
+      });
+    } catch (error) {
+      alert("Sorry i'm not able to find this city for you");
+    }
   }
 
   componentDidUpdate(prevProps) {
@@ -48,11 +51,7 @@ class ApiCalls extends Component {
   }
 
   render() {
-    return (
-      <div>
-        <CityCard {...this.state} />
-      </div>
-    );
+    return <CityCard {...this.state}></CityCard>;
   }
 }
 export default ApiCalls;

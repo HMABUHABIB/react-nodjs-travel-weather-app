@@ -4,17 +4,20 @@ import CustomButton from "../custom-button/custom-button.compomnent";
 
 import "./searchBox.styles.scss";
 
-const SearchBox = (poops) => {
+const SearchBox = (props) => {
   const [searchCity, updateSearchCity] = useState("");
 
   const onSubmitHandler = () => {
-    console.log(searchCity);
+    if (searchCity === "") {
+      alert("City field cannot be empty");
+    } else {
+      props.handleCityChange(searchCity);
+    }
     updateSearchCity("");
-    poops.handleCityChange(searchCity);
   };
 
   const onClickHandlerRandomCity = () => {
-    poops.handleCityChange(nameOfRandomeCity());
+    props.handleCityChange(nameOfRandomeCity());
   };
 
   const changeHandler = (event) => {

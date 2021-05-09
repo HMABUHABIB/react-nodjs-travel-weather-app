@@ -50,33 +50,24 @@
   line-height: 1.6;
 }
 
-.remove {
-  margin: auto;
-  font-size: 2rem;
-  color: #444;
-}
-
-.remove:hover {
-  color: whitesmoke;
-}
-#card-head > h2 {
-  color: #444;
-  flex-grow: 1;
-  margin: auto;
-  text-align: center;
-  font-size: 2.5em;
-  padding: 25px;
-  font-family: "Fira Sans", sans-serif;
-  text-shadow: 2px 2px 10px #2a77aa;
-  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
-}
-#card-head {
+.card-head {
   box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
   border-radius: 1rem;
   width: 65vw;
   margin: auto;
   display: flex;
   justify-content: space-between;
+  h2 {
+    color: #444;
+    flex-grow: 1;
+    margin: auto;
+    text-align: center;
+    font-size: 2.5em;
+    padding: 25px;
+    font-family: "Fira Sans", sans-serif;
+    text-shadow: 2px 2px 10px #2a77aa;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+  }
 }
 
 @media only screen and (max-width: 768px) {
