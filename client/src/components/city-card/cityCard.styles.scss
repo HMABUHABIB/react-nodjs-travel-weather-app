@@ -1,16 +1,23 @@
-#cards {
-  margin: auto;
-  width: fit-content;
-  height: fit-content;
-}
-
-.img-flage,
-.img-pixabay {
+.box-shadow-radius {
   box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
   border-radius: 1rem;
 }
+
+.card-head {
+  width: 55vw;
+  margin: auto;
+  h2 {
+    color: #444;
+    margin: auto;
+    text-align: center;
+    font-size: 2.5em;
+    padding: 25px;
+    text-shadow: 2px 2px 10px #2a77aa;
+  }
+}
+
 .img-pixabay {
-  width: 65vw;
+  width: 55vw;
   height: auto;
 }
 
@@ -25,45 +32,15 @@
 }
 .trip-data-div {
   margin: 25px;
-  width: 65vw;
+  width: 55vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-
-.trip-data-text {
-  width: 42vw;
-  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
-  border-radius: 1rem;
-  margin: auto;
-  padding: 25px;
-}
-
-.trip-data-text > p,
-.trip-data-text > h3 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  color: #444;
-  line-height: 1.6;
-}
-
-.card-head {
-  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
-  border-radius: 1rem;
-  width: 65vw;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  h2 {
-    color: #444;
-    flex-grow: 1;
-    margin: auto;
-    text-align: center;
-    font-size: 2.5em;
-    padding: 25px;
-    font-family: "Fira Sans", sans-serif;
-    text-shadow: 2px 2px 10px #2a77aa;
-    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+  p {
+    font-weight: 500;
+    font-size: 1.5em;
+    color: whitesmoke;
+    width: 32vw;
   }
 }
 

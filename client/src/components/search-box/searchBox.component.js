@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import nameOfRandomeCity from "./randomCities";
 import CustomButton from "../custom-button/custom-button.compomnent";
-import updateLocalStorage from "../../pages/statistics/updateLocalStroge";
 
 import "./searchBox.styles.scss";
 

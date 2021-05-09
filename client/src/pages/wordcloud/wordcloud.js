@@ -28,7 +28,7 @@ const options = {
   transitionDuration: 1000,
 };
 
-const Statistics = () => {
+const Wordcloud = () => {
   const [citis, updateCityList] = useState(
     JSON.parse(localStorage.getItem("wordsList"))
   );
@@ -54,4 +54,4 @@ const Statistics = () => {
   );
 };
 
-export default Statistics;
+export default Wordcloud;
