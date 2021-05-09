@@ -7,7 +7,7 @@ import Card from "../../components/custom-card/custom-card.component";
 class HomePage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { city: "Bielefeld" };
+    this.state = { city: "" };
   }
 
   handleCityChange = (newCity) => {

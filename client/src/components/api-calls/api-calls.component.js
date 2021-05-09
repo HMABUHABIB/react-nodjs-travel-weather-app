@@ -38,7 +38,7 @@ class ApiCalls extends Component {
     const restCountries = await responseRestCountriesApi.json();
     this.setState({ restCountriesApi: restCountries });
 
-    //console.log(this.state);
+    console.log(this.state);
   }
 
   componentDidUpdate(prevProps) {
