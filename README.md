@@ -1,4 +1,4 @@
-# Travel Weather App - Final Project for Udacity's Front End Web Design Nanodegree
+# Travel Weather App - React and NodJs
 
 ## Description
 
