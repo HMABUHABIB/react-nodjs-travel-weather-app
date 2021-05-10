@@ -71,6 +71,8 @@ The website has two pages:
 
 ![Wordcloud](https://raw.githubusercontent.com/HMABUHABIB/react-nodjs-travel-weather-app/main/client/demo-pic/Wordcloud-2.png?raw=true "Wordcloud")
 
+![Wordcloud Gif](https://raw.githubusercontent.com/HMABUHABIB/react-nodjs-travel-weather-app/main/client/demo-pic/Wordcloud.gif?raw=true "Wordcloud Gif")
+
 ## Author
 
 The code was written by Husam Abuhabib.
