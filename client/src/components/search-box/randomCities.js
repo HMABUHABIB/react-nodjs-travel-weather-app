@@ -62,7 +62,7 @@ const randomCities = [
   "Budapest",
   "Lisbon",
   "Dammam",
-  "Penang Island",
+
   "Heraklion",
   "Kyoto",
   "Zhuhai",
