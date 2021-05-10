@@ -9,7 +9,7 @@ const Header = () => {
         <Link className="option" to="/">
           Home
         </Link>
-        <Link className="option" to="/statistics">
+        <Link className="option" to="/wordcloud">
           Wordcloud
         </Link>
       </div>
