@@ -1,6 +1,6 @@
 {
-  "name": "react-travel-weather-app",
-  "homepage": "https://react-travel-weather-app-backe.herokuapp.com/",
+  "name": "react-nodjs-travel-weather-app",
+  "homepage": "https://react-nodjs-travel-weather-app.herokuapp.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
