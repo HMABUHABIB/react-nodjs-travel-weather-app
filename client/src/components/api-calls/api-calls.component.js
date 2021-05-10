@@ -16,21 +16,21 @@ class ApiCalls extends Component {
     /// **fetch openWeatherMapApi ** /////
     try {
       const responseWeather = await fetch(
-        `https://react-travel-weather-app-backe.herokuapp.com/openweathermap?city=${city}`
+        `https://react-nodjs-travel-weather-app.herokuapp.com/openweathermap?city=${city}`
       );
       const weather = await responseWeather.json();
       this.setState({ openWeatherMapApi: weather });
 
       /// **fetch pixabayApi ** /////
       const responsePixabay = await fetch(
-        `https://react-travel-weather-app-backe.herokuapp.com/pixabay?city=${city}`
+        `https://react-nodjs-travel-weather-app.herokuapp.com/pixabay?city=${city}`
       );
       const pixabay = await responsePixabay.json();
 
       /// **fetch RestCountriesApi ** /////
 
       const responseRestCountriesApi = await fetch(
-        `https://react-travel-weather-app-backe.herokuapp.com/restcountries?country_codes=${weather.sys.country}`
+        `https://react-nodjs-travel-weather-app.herokuapp.com/restcountries?country_codes=${weather.sys.country}`
       );
       const restCountries = await responseRestCountriesApi.json();
       this.setState({
