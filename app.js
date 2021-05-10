@@ -18,7 +18,7 @@ const cors = require("cors");
 
 var allowedOrigins = [
   "http://localhost:3000",
-  "https://react-travel-weather-app-backe.herokuapp.com/",
+  "https://react-nodjs-travel-weather-app.herokuapp.com/",
 ];
 app.use(
   cors({
