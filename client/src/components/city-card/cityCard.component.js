@@ -1,7 +1,12 @@
 import React, { useState } from "react";
-import Card from "../custom-card/custom-card.component";
+import CustomCard from "../custom-card/custom-card.component";
 
 import "./cityCard.styles.scss";
+
+/**
+ * CityCard is the last component in the array used to display the received data from the APIs
+ * CityCard will received the data via props from the api calls component ({cityName,pixaBayApi,openWeatherMapApi,restCountriesApi,})
+ */
 
 const CityCard = ({
   cityName,
@@ -9,6 +14,11 @@ const CityCard = ({
   openWeatherMapApi,
   restCountriesApi,
 }) => {
+  /**
+   * onClickRightHandle and onClickLeftHandle used (add or subtract) for imgNumber
+   * imgNumber: is the index number for array (pixaBayApi.hit) where is the list for photos saved
+   * chnage the imgNumber will change the displayed photo
+   */
   const [imgNumber, updateImgNumber] = useState(0);
 
   const onClickRightHandle = () => {
@@ -26,13 +36,20 @@ const CityCard = ({
     }
   };
 
+  /**
+   * Since the City Card will be re-render after every time the parent state will be updated
+   * The case will happend when we some data in the city obejct get updated and this will case an error
+   * To be in safe side we have to check first the all data in the recived object is updated using () ? () : () method
+   * (cityName && pixaBayApi.hits.length && openWeatherMapApi && restCountriesApi)? display the city data : (null => nothing)
+   */
+
   return (
     <div>
       {cityName &&
       pixaBayApi.hits.length &&
       openWeatherMapApi &&
       restCountriesApi ? (
-        <Card>
+        <CustomCard>
           <div className="box-shadow-radius card-head">
             <h2>{cityName}</h2>
           </div>
@@ -91,7 +108,7 @@ const CityCard = ({
               alt={pixaBayApi.hits[imgNumber].tags}
             />
           </div>
-        </Card>
+        </CustomCard>
       ) : null}
     </div>
   );

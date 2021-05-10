@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from "react";
-import Card from "../../components/custom-card/custom-card.component";
+import CustomCard from "../../components/custom-card/custom-card.component";
+import "./wordcloud.styles.scss";
 import ReactWordcloud from "react-wordcloud";
 import { Resizable } from "re-resizable";
 
+/**
+ * ReactWordcloud: Imported component from "react-wordcloud" cloud used to create the word cloud.
+ * Resizable : Imported component from "re-resizable" used to add the resizable function to the ReactWordcloud component.
+ */
+
+// resizeStyle: props to be pass to Resizable component
 const resizeStyle = {
   display: "flex",
   alignItems: "center",
@@ -12,6 +19,7 @@ const resizeStyle = {
   borderRadius: "1rem",
 };
 
+// options: props to be pass to ReactWordcloud component
 const options = {
   colors: ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b"],
   enableTooltip: true,
@@ -28,17 +36,33 @@ const options = {
   transitionDuration: 1000,
 };
 
+/**
+ *
+ * Wordcloud: React component to be render in Wordcloud page
+ * The component used to import resizeStyle and ReactWordcloud component
+ *
+ */
+
 const Wordcloud = () => {
-  const [citis, updateCityList] = useState(
+  /**
+   * citis: is the State for list of the cities that been imported from the localStorage
+   */
+
+  const [cities, updateCityList] = useState(
     JSON.parse(localStorage.getItem("wordsList"))
   );
+
+  /**
+   *
+   * useEffect: used to get the updated list from localStorage then update cities array
+   */
 
   useEffect(() => {
     updateCityList(JSON.parse(localStorage.getItem("wordsList")));
   }, []);
 
   return (
-    <Card>
+    <CustomCard>
       <Resizable
         defaultSize={{
           width: 600,
@@ -46,11 +70,11 @@ const Wordcloud = () => {
         }}
         style={resizeStyle}
       >
-        <div style={{ width: "100%", height: "100%" }}>
-          <ReactWordcloud options={options} words={citis} />
+        <div className="react-word-cloud">
+          <ReactWordcloud options={options} words={cities} />
         </div>
       </Resizable>
-    </Card>
+    </CustomCard>
   );
 };
 

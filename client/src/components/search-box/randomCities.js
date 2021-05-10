@@ -1,3 +1,8 @@
+/**
+ * nameOfRandomeCity: This function used to return a city name from randomCities
+ *
+ */
+
 const randomCities = [
   "Hong Kong",
   "Bangkok",
@@ -113,10 +118,12 @@ const randomCities = [
   "Ghana",
   "Ecuador",
 ];
+// nameOfRandomeCity: return a name for the city from the above array
 function nameOfRandomeCity() {
   return randomCities[getRandomInt(randomCities.length)];
 }
 
+//getRandomInt: return a random number between 0 to max value
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
