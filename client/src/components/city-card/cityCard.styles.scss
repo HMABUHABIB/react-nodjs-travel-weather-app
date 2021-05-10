@@ -21,9 +21,22 @@
   height: auto;
 }
 
+svg {
+  cursor: pointer;
+  margin: 10px;
+  color: #aaa;
+}
+
+.arrow {
+  margin: auto;
+  text-align: center;
+}
+
 .img-pixabay-div {
   width: fit-content;
   margin: 25px;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .img-flage {
   width: 20vw;
