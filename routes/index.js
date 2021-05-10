@@ -6,8 +6,4 @@ router.get("/", function (req, res, next) {
   res.json("Hallo World");
 });
 
-router.get("/weakup", function (req, res, next) {
-  res.json("Hallo World");
-});
-
 module.exports = router;

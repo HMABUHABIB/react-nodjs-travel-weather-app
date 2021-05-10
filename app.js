@@ -1,10 +1,9 @@
 var createError = require("http-errors");
 var express = require("express");
 var path = require("path");
-const expressLayouts = require("express-ejs-layouts");
-
 require("dotenv").config();
 
+//Import the API from the routes
 const indexRouter = require("./routes/index");
 const openweathermap = require("./routes/openweathermap");
 const pixabay = require("./routes/pixabay");
@@ -16,6 +15,7 @@ var app = express();
 const cors = require("cors");
 //app.use(cors());
 
+// The list of the websites where the API call can be accessed from
 var allowedOrigins = [
   "http://localhost:3000",
   "https://react-nodjs-travel-weather-app.herokuapp.com/",
@@ -45,13 +45,14 @@ app.set("view engine", "pug");
 
 app.use(express.json());
 
+//The list of the link for the API
 app.use("/main", indexRouter);
 app.use("/openweathermap", openweathermap);
 app.use("/pixabay", pixabay);
 app.use("/restcountries", restcountries);
 
+// (*) All the calls other than the one above will direct to the client file where the frontend (React app) is
 app.use(express.static(path.join(__dirname, "client/build")));
-
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname + "/client/build/index.html"));
 });

@@ -28,7 +28,10 @@ const CityCard = ({
 
   return (
     <div>
-      {cityName && pixaBayApi && openWeatherMapApi && restCountriesApi ? (
+      {cityName &&
+      pixaBayApi.hits.length &&
+      openWeatherMapApi &&
+      restCountriesApi ? (
         <Card>
           <div className="box-shadow-radius card-head">
             <h2>{cityName}</h2>
@@ -62,8 +65,8 @@ const CityCard = ({
               <svg
                 onClick={onClickLeftHandle}
                 xmlns="http://www.w3.org/2000/svg"
-                width="35"
-                height="35"
+                width="45"
+                height="45"
                 fill="currentColor"
                 className="bi bi-arrow-left-circle-fill"
                 viewBox="0 0 16 16"
@@ -73,8 +76,8 @@ const CityCard = ({
               <svg
                 onClick={onClickRightHandle}
                 xmlns="http://www.w3.org/2000/svg"
-                width="35"
-                height="35"
+                width="45"
+                height="45"
                 fill="currentColor"
                 className="bi bi-arrow-right-circle-fill"
                 viewBox="0 0 16 16"
