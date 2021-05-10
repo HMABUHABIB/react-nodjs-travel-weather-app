@@ -16,7 +16,9 @@ class HomePage extends React.Component {
     super(props);
     this.state = { city: "" };
   }
+  /*
   // handleCityChange used to update city name via setState and then send the city to updateLocalStorage to save it the Local Storage
+  */
   handleCityChange = (newCity) => {
     this.setState({ city: newCity });
     updateLocalStorage(newCity);

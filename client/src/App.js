@@ -6,6 +6,11 @@ import HomePage from "./pages/homePage/homePage";
 import Wordcloud from "./pages/wordcloud/wordcloud";
 import "./App.css";
 
+/*
+App => react function component used to render (Header,HomePage,Wordcloud)
+The App use Switch and Route to navigate between the pages in the website (HomePage,Wordcloud)
+*/
+
 const App = () => {
   return (
     <div className="App">

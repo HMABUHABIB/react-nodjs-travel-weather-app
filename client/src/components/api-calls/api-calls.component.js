@@ -11,9 +11,9 @@ import CityCard from "../city-card/cityCard.component";
 class ApiCalls extends Component {
   constructor(props) {
     super(props);
-
+    /*
     // This state used to save the object of (city name that have been recived from search component and the recived data from the APIs)
-
+    */
     this.state = {
       cityName: props.city,
       openWeatherMapApi: "",
@@ -34,21 +34,23 @@ class ApiCalls extends Component {
       );
       const weather = await responseWeather.json();
       this.setState({ openWeatherMapApi: weather });
-
+      /*
       /// ** fetch pixabayApi ** using city name as query /////
+      */
       const responsePixabay = await fetch(
         `https://react-nodjs-travel-weather-app.herokuapp.com/pixabay?city=${city}`
       );
       const pixabay = await responsePixabay.json();
-
+      /*
       /// ** fetch RestCountriesApi ** using the country codes as query /////
-
+      */
       const responseRestCountriesApi = await fetch(
         `https://react-nodjs-travel-weather-app.herokuapp.com/restcountries?country_codes=${weather.sys.country}`
       );
       const restCountries = await responseRestCountriesApi.json();
-
+      /*
       // After fetching the data from all the APIs => this.setState will run to update the State with the new received data
+      */
       this.setState({
         cityName: city,
         openWeatherMapApi: { ...weather },
@@ -56,8 +58,9 @@ class ApiCalls extends Component {
         restCountriesApi: { ...restCountries },
       });
     } catch (error) {
+      /*
       // catch: used to catch any error during fetching the data from the APIs for example if the city not found
-
+      */
       alert("Sorry i'm not able to find this city for you");
       this.setState({
         cityName: "",
@@ -74,7 +77,9 @@ class ApiCalls extends Component {
       this.fetchAndupdateState(this.props);
     }
   }
+  /*
   // The ApiCalls component will re-render every time when state is updated => then pass the new state to CityCard component via props.
+  */
   render() {
     return <CityCard {...this.state}></CityCard>;
   }
