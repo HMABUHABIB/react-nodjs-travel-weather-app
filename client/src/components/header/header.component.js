@@ -17,6 +17,15 @@ const Header = () => {
         <Link className="option" to="/wordcloud">
           Wordcloud
         </Link>
+
+        <a
+          className="option"
+          target="_blank"
+          rel="noreferrer"
+          href="https://github.com/HMABUHABIB/react-nodjs-travel-weather-app"
+        >
+          GitHub Repo
+        </a>
       </div>
     </div>
   );

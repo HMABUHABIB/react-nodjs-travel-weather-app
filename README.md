@@ -1,9 +1,11 @@
 # Travel Weather App - React and NodJs
 
+[Live demo](https://react-nodjs-travel-weather-app.herokuapp.com/)
+
 ## Description
 
 This project takes a user's destination.
-Then will return to the user a weather forecast for the trip and some more data about the destination.
+Then will display to the user a weather forecast for the destination and more data about it.
 The user has the ability to click on I'm Feeling Lucky this will return a random destination.
 There are 3 APIs used in this project:
 
