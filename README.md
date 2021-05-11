@@ -1,6 +1,6 @@
 # Travel Weather App - React and NodJs
 
-[Live demo](https://react-nodjs-travel-weather-app.herokuapp.com/)
+[Live demo](https://react-nodjs-travel-weather-app.herokuapp.com/) Note:(Please wait 5 seconds for the server to wake up)
 
 ## Description
 
